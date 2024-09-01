@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply mocha bg-crust text-text m-8; }
+h1 { @apply text-2xl font-bold; }
+h2 { @apply font-bold text-subtext1; }
+h3 { @apply font-bold text-subtext0; }
+hr { @apply border-surface1; }
+li { @apply list-disc ml-6; }
+a { @apply text-sapphire underline; }
+
+main {
+    @apply grid gap-4;
+    grid-template-columns: 12em auto 20em;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-areas:
+        "main   main   repos"
+        "links  skills repos"
+        "stats  stats  repos"
+        "empty  empty  repos";
+}
+
+@media (max-width: 970px) {
+    main {
+        grid-template-columns: 12em auto;
+        grid-template-rows: min-content min-content min-content min-content;
+        grid-template-areas:
+            "main   main"
+            "links  skills"
+            "stats  stats"
+            "repos  repos";
+    }
+}
