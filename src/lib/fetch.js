@@ -38,6 +38,9 @@ export function github(max, user) {
  * @property {string} state - The activity state
  * @property {string} details - The activity details
  * @property {number} started - The activity start time
+ * @property {Object} images - The activity images
+ * @property {string} images.large - The large activity image
+ * @property {string} images.small - The small activity image
  */
 
 /**
@@ -71,6 +74,10 @@ export function discord(id) {
                 started: activity.created_at,
                 state: activity.state,
                 details: activity.details,
+                images: {
+                    large: !activity?.assets?.large_image ? '' : `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity?.assets?.large_image}.png?size=256`,
+                    small: !activity?.assets?.small_image ? '' : `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity?.assets?.small_image}.png?size=256`,
+                },
             })).sort((a, b) => b.started - a.started) || [],
         })).catch((e) => {
             console.error(e);

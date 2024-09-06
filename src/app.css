@@ -15,10 +15,22 @@ main {
     grid-template-columns: 12em auto 20em;
     grid-template-rows: min-content min-content min-content;
     grid-template-areas:
-        "main   main   repos"
-        "links  skills repos"
-        "stats  stats  repos"
-        "empty  empty  repos";
+        "main   main   stats repos"
+        "links  skills stats repos"
+        "empty  empty  stats repos"
+        "empty  empty  stats repos";
+}
+
+@media (max-width: 1280px) {
+    main {
+        grid-template-columns: 12em auto 20em;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas:
+            "main   main   repos"
+            "links  skills repos"
+            "stats  stats  repos"
+            "empty  empty  repos";
+    }
 }
 
 @media (max-width: 970px) {
@@ -30,5 +42,18 @@ main {
             "links  skills"
             "stats  stats"
             "repos  repos";
+    }
+}
+
+@media (max-width: 450px) {
+    main {
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content min-content min-content min-content;
+        grid-template-areas:
+            "main"
+            "skills"
+            "links"
+            "stats"
+            "repos";
     }
 }
