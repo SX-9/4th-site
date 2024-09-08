@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body { @apply mocha bg-crust text-text m-8; }
+body { @apply bg-slate-950 text-gray-400 m-8; }
 h1 { @apply text-2xl font-bold; }
-h2 { @apply font-bold text-subtext1; }
-h3 { @apply font-bold text-subtext0; }
-hr { @apply border-surface1; }
+h2, h3 { @apply font-bold; }
 li { @apply list-disc ml-6; }
-a { @apply text-sapphire underline; }
+a { @apply text-sky-500 underline; }
 
 main {
     @apply grid gap-4;

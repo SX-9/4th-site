@@ -4,5 +4,4 @@ export default {
     "./index.html",
     "./src/**/*.{svelte,js,ts,jsx,tsx}",
   ],
-  plugins: [require("@catppuccin/tailwindcss")],
 }

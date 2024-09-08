@@ -23,7 +23,7 @@
   <div style="grid-area:main;">
     <h1>{information.title}</h1>
     <p>{information.description}</p>
-    <span class="text-subtext0 text-sm italic">
+    <span class="text-sm italic">
       <a on:click={refresh} href="/#">refresh dynamic data</a> -
       <b>{days || 'Today'}</b> { days ? 'day' + (days === 1 ? '' : 's') + ' until my birthday.' : 'is my birthday!' }
       It's <b>{time}</b> for me.
@@ -47,32 +47,30 @@
   </div>
   <div style="grid-area:repos;">
     <h2>Github Repositories</h2>
-    <hr class="mt-2">
     {#await gh}
       <span class="italic my-2">loading github repositories...<br></span>
     {:then data}
         {#each data as repo}
-          <div class="my-2 flex justify-between items-center">
+          <div class="my-4 flex justify-between items-center gap-4">
             <div>
               <h3><a href={repo.url}>{repo.name}</a></h3>
               <span>{repo.desc || ''}</span>
             </div>
             <div class="text-right">
               {#if repo.stars}  
-                <span class="text-yellow"><b>{repo.stars}</b> star(s)</span>
+                <span class="text-yellow-300"><b>{repo.stars}</b> star(s)</span>
                 <br>
               {/if}
-              <span class="text-subtext1 italic">{repo.lang || ''}</span>
+              <span class="italic">{repo.lang || ''}</span>
             </div>
           </div>
-          <hr>
         {/each}
     {/await}
     <a href={'https://github.com/' + information.github}>More...</a>
   </div>
   <div style="grid-area:stats;">
     {#await dc}
-      <span class="italic text-subtext0">loading discord status...</span>
+      <span class="italic">loading discord status...</span>
     {:then data}
       <div class="mt-4 flex flex-wrap justify-start items-start gap-4 mb-4">
         {#if data?.spotify?.song}
@@ -82,7 +80,7 @@
               <img class="size-12 rounded-md" src={data.spotify.art} alt="album art">
               <div>
                 <h3><a href={data.spotify.link}>{data.spotify.song}</a></h3>
-                <span class="italic text-subtext1">{data.spotify.artist}</span>
+                <span class="italic">{data.spotify.artist}</span>
               </div>
             </div>
           </div>
@@ -108,7 +106,7 @@
                   <img class="size-6 rounded-full absolute -bottom-1 -right-1" src={activity.images.small} alt="small">
                 {/if}
               </div>
-              <span class="italic text-subtext1">
+              <span class="italic">
                 Started {timeAgo(activity.started)}
                 {#if activity.state}
                   <br>{activity.state}
@@ -121,13 +119,13 @@
           </div>
         {/each}
       </div>
-      <span class="italic text-subtext0">@<span class="underline">{data?.username}</span> is 
+      <span class="italic">@<span class="underline">{data?.username}</span> is 
       {#if data?.status === 'online'}
-        <span class="text-green">{data?.status}</span>
+        <span class="text-green-300">{data?.status}</span>
       {:else if data?.status === 'idle'}
-        <span class="text-yellow">{data?.status}</span>
+        <span class="text-yellow-300">{data?.status}</span>
       {:else if data?.status === 'dnd'}
-        <span class="text-red">{data?.status}</span>
+        <span class="text-red-300">{data?.status}</span>
       {:else}
         {data?.status}
       {/if}
