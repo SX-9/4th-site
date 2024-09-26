@@ -9,6 +9,7 @@ export default {
     birthday: [12,6],
     timezone: "Asia/Jakarta",
     links: {
+        "Blog website": "https://blog.satr14.my.id/",
         "Terminal portfolio": "https://github.com/SX-9/term-port",
         "Web.SH dashboard": "https://sx-9.github.io/web.sh-client/",
         "Collatz Conjecture": "https://sx-9.github.io/collatz-conjecture/",
