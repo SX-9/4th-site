@@ -4,7 +4,7 @@ export default {
     skills: {
         "Web Development": ["HTML", "CSS", "Tailwind", "JavaScript", "Vue", "Svelte", "Vite"],
         "Backend Development": ["NodeJS", "Express", "SvelteKit", "Python", "Firebase"],
-        "Server Management": ["Linux", "Nginx", "Docker", "Git", "Bash", "Proxmox"],
+        "Server Management": ["Linux", "Nginx", "Docker", "Git", "Bash", "Proxmox", "Nix"],
     },
     birthday: [12,6],
     timezone: "Asia/Jakarta",
