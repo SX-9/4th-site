@@ -1,5 +1,5 @@
 export default {
-    title: "Hello World!",
+    title: "satr14's site",
     description: "I'm Satria (also known as satr14), Im a self-taught hobbyist web developer from Indonesia. I've been programming since 2021 and I love spending my free time  working on personal projects and experimenting with new technologies.",
     skills: {
         "Web Development": ["HTML", "CSS", "Tailwind", "JavaScript", "Vue", "Svelte", "Vite"],

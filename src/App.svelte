@@ -21,7 +21,7 @@
 
 <main>
   <div style="grid-area:main;">
-    <h1>{information.title}</h1>
+    <h1 class="my-4">{information.title}</h1>
     <p>{information.description}</p>
     <span class="text-sm italic">
       <a on:click={refresh} href="/#">refresh dynamic data</a> -
@@ -33,7 +33,7 @@
     <ul>
       {#each Object.entries(information.links) as [name, url]}
         <li class="my-1.5">
-          <a href={url} target="_blank">
+          <a href={url}>
             {name}
           </a>
         </li>
