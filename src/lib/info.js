@@ -10,9 +10,8 @@ export default {
     timezone: "Asia/Jakarta",
     links: {
         "Blog website": "https://blog.satr14.my.id/",
-        "Terminal portfolio": "https://github.com/SX-9/term-port",
-        "Web.SH dashboard": "https://sx-9.github.io/web.sh-client/",
-        "Collatz Conjecture": "https://sx-9.github.io/collatz-conjecture/",
+        "Terminal portfolio": "https://github.com/SX-9/term-port/",
+        "Project part-of.my.id": "https://part-of.my.id/",
         "DVD logo bounce": "https://sx-9.github.io/dvd-bounce/",
         "Chess from scratch": "https://sx-9.github.io/chess-from-scratch/",
     },
